@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'make'
+                //sh 'make'
                 echo "Build Success"
             }
         }
         stage('test') {
             steps {
-                sh 'make check || true'
+                //sh 'make check || true'
                 echo "Test Success"
             }
         }
