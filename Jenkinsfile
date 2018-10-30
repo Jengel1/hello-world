@@ -3,7 +3,19 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'make'
+                echo "Build Success"
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'make check || true'
+                echo "Test Success"
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo "Deploy Success
             }
         }
     }
