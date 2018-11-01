@@ -1,19 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('checkout') {
             steps {
-                echo "Build Success"
-            }
-        }
-        stage('test') {
-            steps {
-                echo "Test Success"
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo "Deploy Success"
+                checkout scm
             }
         }
     }
